@@ -11,13 +11,13 @@ String modifiedSentence;
 BufferedReader inFromUser = new BufferedReader(new InputStreamReader(System.in));
 
 //Create client socket, connect to serve
-Socket clientSocket = new Socket("hostname", 6789);
+Socket clientSocket = new Socket("localhost", 6789);
 
 //Create output stream attached to socket
 DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream()); 
  
 //input stream attatched to socket
-BufferedReader inFromServer =new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 sentence = inFromUser.readLine();
 
 //send sentence to server
